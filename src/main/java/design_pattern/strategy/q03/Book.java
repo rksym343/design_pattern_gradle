@@ -18,7 +18,5 @@ public class Book {
 	public int getpYear() {
 		return pYear;
 	}
-	
-	
 
 }
