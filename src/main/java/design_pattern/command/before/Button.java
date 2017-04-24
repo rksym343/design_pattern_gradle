@@ -2,13 +2,28 @@ package design_pattern.command.before;
 
 public class Button {
 	private Lamp theLamp;
+	private Alarm theAlarm;
+	private Mode theMode;
 
-	public Button(Lamp theLamp) {
+	public Button(Lamp theLamp, Alarm theAlarm) {
 		this.theLamp = theLamp;
+		this.theAlarm = theAlarm;
+	}
+
+	public void setTheMode(Mode theMode) {
+		this.theMode = theMode;
 	}
 
 	public void pressed() {
-		theLamp.turnOn();
+		switch (theMode) {
+		case LAMP:
+			theLamp.turnOn();
+			break;
+		case ALARM:
+			theAlarm.start();
+			break;
+		}
+
 	}
 
 }
