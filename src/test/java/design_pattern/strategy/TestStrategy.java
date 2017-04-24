@@ -2,6 +2,9 @@ package design_pattern.strategy;
 
 import static org.junit.Assert.*;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import org.junit.Test;
 
 import design_pattern.strategy.attack.MissileStrategy;
@@ -39,5 +42,14 @@ public class TestStrategy {
 		robot.move();
 		robot.attack();
 	}
+	
+	@Test
+	public void testYear() {
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(new Date());
+		int year = cal.get(Calendar.YEAR);
+		System.out.println(year);
+	}
+	
 
 }
