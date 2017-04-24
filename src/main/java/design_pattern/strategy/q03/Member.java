@@ -12,7 +12,17 @@ public class Member {
 		return sum;
 	}
 
-	public void buy(Book book) {
-		sum += book.getPrice();
+	public void buy(int price) {
+		sum += price;
 	}
+
+	public void setSum(int sum) {
+		this.sum = sum;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Member [name=%s, sum=%s]", name, sum);
+	}
+
 }

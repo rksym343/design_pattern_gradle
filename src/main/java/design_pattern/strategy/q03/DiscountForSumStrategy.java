@@ -7,8 +7,10 @@ public class DiscountForSumStrategy implements DiscountStrategy {
 	@Override
 	public int discountPrice(Buy buy) {
 		if (buy.getTheMember().getSum() > 9999) {
+			System.out.println("할인된 가격" + (int) (buy.getTheBook().getPrice() * (1 - discountP)));
 			return (int) (buy.getTheBook().getPrice() * (1 - discountP));
 		}
+		System.out.println("정상 가격" + buy.getTheBook().getPrice());
 		return buy.getTheBook().getPrice();
 	}
 }
