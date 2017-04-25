@@ -18,7 +18,7 @@ public class AirBagDecorator extends CarOptionDecorator {
 	@Override
 	public String getCarinfo() {
 		// TODO Auto-generated method stub
-		return super.getCarinfo();
+		return super.getCarinfo()+ " AirBag";
 	}
 
 	private int getAirBagPrice() {
