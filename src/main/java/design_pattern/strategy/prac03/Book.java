@@ -1,4 +1,4 @@
-package design_pattern.strategy.q03;
+package design_pattern.strategy.prac03;
 
 public class Book {
 	private String bookName;

@@ -1,4 +1,4 @@
-package design_pattern.strategy.q03;
+package design_pattern.strategy.prac03;
 
 public class Member {
 	private String name;
@@ -12,7 +12,7 @@ public class Member {
 		return sum;
 	}
 
-	public void buy(int price) {
+	public void buyItem(int price) {
 		sum += price;
 	}
 

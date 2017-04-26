@@ -1,4 +1,4 @@
-package design_pattern.strategy.q03;
+package design_pattern.strategy.prac03;
 
 public class DiscountForSumStrategy implements DiscountStrategy {
 	// 회원 누적 대여금액 만원 이상일시 10%할인

@@ -1,4 +1,4 @@
-package design_pattern.strategy.q03;
+package design_pattern.strategy.prac03;
 
 public class TestMain {
 	
@@ -6,14 +6,9 @@ public class TestMain {
 	public static void main(String[] args) {
 		Book book = new Book("책제목", 2014, 12000);
 		Member member = new Member("m1");
+		DiscountStrategy discountStrategy = new DiscountForSumStrategy();
 		
-		
-		Buy buy1 = new Buy();
-		buy1.setTheBook(book);
-		buy1.setTheMember(member);
-		buy1.setDiscountStrategy(new DiscountForSumStrategy());
-		
-		
+		Buy buy1 = new Buy(book, member, discountStrategy, 1);
 		printData(buy1);
 		
 		
@@ -29,12 +24,10 @@ public class TestMain {
 		
 		Book book2 = new Book("책제목", 2000, 12000);
 		Member member2 = new Member("m2");
+		DiscountStrategy discountStrategy2 = new DiscountForPYearStrategy();
 		
 		
-		Buy buy2 = new Buy();
-		buy2.setTheBook(book2);
-		buy2.setTheMember(member2);
-		buy2.setDiscountStrategy(new DiscountForPYearStrategy());
+		Buy buy2 = new Buy(book2, member2, discountStrategy2, 3);
 		printData(buy2);
 		
 	}
@@ -42,7 +35,7 @@ public class TestMain {
 	
 	public static void printData(Buy buy){
 		System.out.println("============"+buy.getTheMember()+"============");
-		buy.buy();
-		
+		buy.buyItem();
+		System.out.println("누적금액 : "+buy.getTheMember().getSum());
 	}
 }

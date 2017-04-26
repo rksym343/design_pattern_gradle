@@ -1,4 +1,4 @@
-package design_pattern.strategy.q03;
+package design_pattern.strategy.prac03;
 
 import java.util.Calendar;
 import java.util.Date;
