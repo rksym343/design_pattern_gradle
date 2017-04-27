@@ -7,7 +7,8 @@ public class Client {
 		for(int i =0; i < balls.length; i++){
 			balls[i] = new Ball(INIT_LOCATION[i], INIT_LOCATION[i]);
 		//	balls[i].setDirectionStrategy(new HorizonalMoveStrategy());
-			balls[i].setDirectionStrategy(new VerticalMoveStrategy());
+		//	balls[i].setDirectionStrategy(new VerticalMoveStrategy());
+			balls[i].setDirectionStrategy(new DiagonalMoveStrategy());
 			balls[i].setDrawStrategy(new RedDrawStrategy());
 			balls[i].start();
 		}
