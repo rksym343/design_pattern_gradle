@@ -61,12 +61,12 @@ public class Ball extends Thread {
 	public void setDrawStrategy(DrawStrategy drawStrategy) {
 		this.drawStrategy = drawStrategy;
 	}
-	
-	public void draw(){
+
+	public void draw() {
 		drawStrategy.draw(this);
 	}
-	
-	public void move(){
+
+	public void move() {
 		directionStrategy.move(this);
 	}
 
@@ -76,6 +76,4 @@ public class Ball extends Thread {
 		move();
 	}
 
-	
-	
 }

@@ -13,7 +13,6 @@ public class Client2 {
 	private static ElevatorFactory createFactory(String vendorName) {
 		ElevatorFactory factory = null;
 		VendorID vendorID = null;
-
 		if (vendorName.equalsIgnoreCase("lg")) {
 			vendorID = VendorID.LG;
 		} else if (vendorName.equalsIgnoreCase("hyundai")) {
