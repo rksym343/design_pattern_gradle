@@ -8,7 +8,7 @@ public class VerticalMoveStrategy extends DirectionStrategy {
 		while (true) {
 			ball.setY(ball.getY() + ball.getyInterval());
 			if ((ball.getY() < 0 && ball.getyInterval() < 0)
-					|| ball.getY() + ball.SIZE > BallFrame.HEIGHT - 40 && ball.getyInterval() > 0) {
+					|| ball.getY() + ball.SIZE > BallFrame.HEIGHT - 20 && ball.getyInterval() > 0) {
 				ball.setIntervals(0, -ball.getyInterval());
 			}
 			try {
